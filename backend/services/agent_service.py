@@ -1,5 +1,6 @@
 """
 Agent Service - Singleton wrapper around CoreAgentController.
+Manages LLM provider selection and agent lifecycle.
 """
 from typing import Optional
 import sys
@@ -25,13 +26,14 @@ from memory.memory_system import MemorySystem
 from safety.safety import Safety
 
 
-
 class AgentService:
     """
     Singleton service managing the agent lifecycle.
+    Supports LLM provider switching between Ollama and Gemini.
     """
     _instance: Optional["AgentService"] = None
     _agent: Optional[CoreAgentController] = None
+    _brain: Optional[Brain] = None
     _initialized: bool = False
     
     def __new__(cls):
@@ -43,17 +45,22 @@ class AgentService:
     def is_initialized(self) -> bool:
         return self._initialized
     
-    def initialize(self) -> dict:
+    def initialize(self, provider: str = "ollama") -> dict:
         """
         Initialize all agent components.
-        Returns success status and message.
+        
+        Args:
+            provider: LLM provider to use ('ollama' or 'gemini'). Default: 'ollama'
+            
+        Returns:
+            Success status and message.
         """
         if self._initialized:
             return {"success": True, "message": "Already initialized"}
         
         try:
-            # Initialize components
-            brain = Brain()
+            # Initialize components with selected provider
+            self._brain = Brain(default_provider=provider)
             executor = Executor()
             perception = VoiceEngine()
             memory = MemorySystem()
@@ -61,7 +68,7 @@ class AgentService:
             
             # Create controller
             self._agent = CoreAgentController(
-                brain=brain,
+                brain=self._brain,
                 executor=executor,
                 perception=perception,
                 memory=memory,
@@ -69,10 +76,70 @@ class AgentService:
             )
             
             self._initialized = True
-            return {"success": True, "message": "AURA initialized successfully"}
+            provider_name = self._brain.get_provider_name()
+            return {
+                "success": True, 
+                "message": f"AURA initialized with {provider_name.upper()} provider"
+            }
             
         except Exception as e:
             return {"success": False, "message": str(e)}
+    
+    def set_llm_provider(self, provider: str) -> dict:
+        """
+        Switch to a different LLM provider.
+        
+        Args:
+            provider: 'ollama' or 'gemini'
+            
+        Returns:
+            Success status and current provider name.
+        """
+        if not self._initialized or self._brain is None:
+            return {
+                "success": False,
+                "message": "Agent not initialized",
+                "provider": None
+            }
+        
+        success = self._brain.set_provider(provider)
+        current = self._brain.get_provider_name()
+        
+        if success:
+            return {
+                "success": True,
+                "message": f"Switched to {current.upper()} provider",
+                "provider": current
+            }
+        else:
+            return {
+                "success": False,
+                "message": f"Failed to switch. Unknown provider: {provider}",
+                "provider": current
+            }
+    
+    def get_llm_status(self) -> dict:
+        """
+        Get current LLM provider status.
+        
+        Returns:
+            Provider name, health status, and available providers.
+        """
+        if not self._initialized or self._brain is None:
+            return {
+                "current_provider": None,
+                "providers": {},
+                "available": []
+            }
+        
+        status = self._brain.get_provider_status()
+        current = self._brain.get_provider_name()
+        
+        return {
+            "current_provider": current,
+            "providers": status,
+            "available": list(status.keys())
+        }
     
     def run(self, message: str) -> dict:
         """
@@ -116,10 +183,15 @@ class AgentService:
             }
     
     def get_status(self) -> dict:
-        """Get current system status."""
+        """Get current system status including LLM provider."""
+        llm_provider = None
+        if self._brain:
+            llm_provider = self._brain.get_provider_name()
+            
         return {
             "initialized": self._initialized,
-            "gpu": "NVIDIA RTX 3050" if self._initialized else "Not active"
+            "gpu": "NVIDIA RTX 3050" if self._initialized else "Not active",
+            "llm_provider": llm_provider
         }
 
 

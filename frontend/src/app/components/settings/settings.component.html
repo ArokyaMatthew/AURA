@@ -1,0 +1,61 @@
+<!-- Settings Toggle Button -->
+<button class="settings-toggle" (click)="toggle()" [class.active]="isOpen()">
+    <span class="icon">⚙️</span>
+    <span class="provider-badge">{{ api.currentProvider() | uppercase }}</span>
+</button>
+
+<!-- Settings Panel -->
+<div class="settings-panel" [class.open]="isOpen()">
+    <div class="panel-header">
+        <h3>LLM Provider</h3>
+        <button class="close-btn" (click)="close()">✕</button>
+    </div>
+
+    <div class="panel-content">
+        <!-- Status Message -->
+        @if (statusMessage()) {
+        <div class="status-message" [class.error]="statusMessage()?.startsWith('Error')">
+            {{ statusMessage() }}
+        </div>
+        }
+
+        <!-- Provider Options -->
+        <div class="provider-list">
+            @for (provider of api.availableProviders(); track provider) {
+            <button class="provider-option" [class.selected]="provider === api.currentProvider()"
+                [class.unhealthy]="providerHealth()[provider] === false" [disabled]="isLoading()"
+                (click)="selectProvider(provider)">
+                <span class="provider-icon">{{ getProviderIcon(provider) }}</span>
+                <span class="provider-info">
+                    <span class="provider-name">{{ getProviderLabel(provider) }}</span>
+                    <span class="provider-status">
+                        @if (providerHealth()[provider] === true) {
+                        <span class="health-dot healthy"></span> Available
+                        } @else if (providerHealth()[provider] === false) {
+                        <span class="health-dot unhealthy"></span> Unavailable
+                        } @else {
+                        <span class="health-dot unknown"></span> Unknown
+                        }
+                    </span>
+                </span>
+                @if (provider === api.currentProvider()) {
+                <span class="check-mark">✓</span>
+                }
+            </button>
+            }
+        </div>
+
+        <!-- Loading Indicator -->
+        @if (isLoading()) {
+        <div class="loading-overlay">
+            <span class="spinner"></span>
+            Switching provider...
+        </div>
+        }
+    </div>
+</div>
+
+<!-- Backdrop -->
+@if (isOpen()) {
+<div class="backdrop" (click)="close()"></div>
+}

@@ -68,3 +68,198 @@ GOAL: can you search for "Nikil Kamath" on web
 | TOOL: N/A
 | ARGS: {}
 +==========================================================+
+2026-01-03 16:41:20 | INFO | AURA.Controller | ############################################################
+  AURA AGENT SESSION STARTED
+############################################################
+GOAL: can you search for "Nikil Kamath" on web
+############################################################
+2026-01-03 16:41:20 | DEBUG | AURA.Controller | Memory context retrieved: 1159 chars
+2026-01-03 16:41:20 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 0 - THINKING...
++==========================================================+
+2026-01-03 16:41:22 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 0 - ACTION DECIDED
++==========================================================+
+| TYPE: ACTION
+| THOUGHT: The user wants to search for 'Nikil Kamath' on the web. I should use the SEARCH_WEB tool for this.
+| TOOL: SEARCH_WEB
+| ARGS: {
+  "query": "Nikil Kamath"
+}
++==========================================================+
+2026-01-03 16:41:25 | INFO | AURA.Controller | 
++==========================================================+\n| STEP 0 - EXECUTION SUCCESS [OK]\n+==========================================================+\n| RESULT: 1. Nikhil Kamath
+   URL: https://en.wikipedia.org/wiki/Nikhil_Kamath
+   Nikhil Kamath (born 5 September 1986) is an Indian entrepreneur and investor. He is the co-founder of Zerodha, a retail stockbroker, and True Beacon, an asset management company. As of December 2025, Kamath is worth $3.3 billion, according to Forbes. He, along with his brother Nithin, is also part of Forbes' list of India’s 100 Richest for 2024.
+
+2. Nikhil Kamath: Latest News, Photos and Videos -
+   URL: https://www.bollywoo...\n+==========================================================+
+2026-01-03 16:41:25 | DEBUG | AURA.Controller | 
+------------------------------------------------------------\nOBSERVATION:\nAction completed. Result: 1. Nikhil Kamath
+   URL: https://en.wikipedia.org/wiki/Nikhil_Kamath
+   Nikhil Kamath (born 5 September 1986) is an Indian entrepreneur and investor. He is the co-founder of Zerodha, a retail stockbroker, and True Beacon, an asset management company. As of December 2025, Kamath is worth $3.3 billion, according to Forbes. He, along with his brother Nithin, is also part of Forbes' list of India’s 100 Richest for 2024.
+
+2. Nikhil Kamath: Latest News, Photos and Videos -
+   URL: https://www.bollywoo... (truncated)\n------------------------------------------------------------
+2026-01-03 16:41:25 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 1 - THINKING...
++==========================================================+
+2026-01-03 16:41:28 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 1 - ACTION DECIDED
++==========================================================+
+| TYPE: RESPONSE
+| THOUGHT: I have successfully searched for 'Nikil Kamath' on the web and found relevant information. I can now provide a summary to the user.
+| TOOL: N/A
+| ARGS: {}
++==========================================================+
+2026-01-03 17:08:39 | INFO | AURA.Controller | ############################################################
+  AURA AGENT SESSION STARTED
+############################################################
+GOAL: hello
+############################################################
+2026-01-03 17:08:39 | DEBUG | AURA.Controller | Memory context retrieved: 1159 chars
+2026-01-03 17:08:39 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 1 - THINKING...
++==========================================================+
+2026-01-03 17:08:40 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 1 - ACTION DECIDED
++==========================================================+
+| TYPE: STOP
+| THOUGHT: N/A
+| TOOL: N/A
+| ARGS: {}
++==========================================================+
+2026-01-03 17:10:28 | INFO | AURA.Controller | ############################################################
+  AURA AGENT SESSION STARTED
+############################################################
+GOAL: hello
+############################################################
+2026-01-03 17:10:28 | DEBUG | AURA.Controller | Memory context retrieved: 1159 chars
+2026-01-03 17:10:28 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 1 - THINKING...
++==========================================================+
+2026-01-03 17:10:28 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 1 - ACTION DECIDED
++==========================================================+
+| TYPE: STOP
+| THOUGHT: N/A
+| TOOL: N/A
+| ARGS: {}
++==========================================================+
+2026-01-03 17:11:04 | INFO | AURA.Controller | ############################################################
+  AURA AGENT SESSION STARTED
+############################################################
+GOAL: hello
+############################################################
+2026-01-03 17:11:04 | DEBUG | AURA.Controller | Memory context retrieved: 1159 chars
+2026-01-03 17:11:04 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 0 - THINKING...
++==========================================================+
+2026-01-03 17:11:06 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 0 - ACTION DECIDED
++==========================================================+
+| TYPE: RESPONSE
+| THOUGHT: The user greeted me with 'hello'. I should respond with a friendly greeting.
+| TOOL: N/A
+| ARGS: {}
++==========================================================+
+2026-01-03 17:11:24 | INFO | AURA.Controller | ############################################################
+  AURA AGENT SESSION STARTED
+############################################################
+GOAL: open settings and change the mode to dark mode
+############################################################
+2026-01-03 17:11:24 | DEBUG | AURA.Controller | Memory context retrieved: 1159 chars
+2026-01-03 17:11:24 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 0 - THINKING...
++==========================================================+
+2026-01-03 17:11:26 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 0 - ACTION DECIDED
++==========================================================+
+| TYPE: ACTION
+| THOUGHT: The user wants to open system settings and change the display mode to dark mode. I need to find out how to achieve this using available tools, likely via PowerShell commands. I will start by searching...
+| TOOL: SEARCH_WEB
+| ARGS: {
+  "query": "powershell command change windows theme dark mode"
+}
++==========================================================+
+2026-01-03 17:11:29 | INFO | AURA.Controller | 
++==========================================================+\n| STEP 0 - EXECUTION SUCCESS [OK]\n+==========================================================+\n| RESULT: 1. Windows 10: How to Enable Dark mode in PowerShell | Joon's Blog
+   URL: http://joonro.github.io/blog/posts/windows-10-enable-dark-mode-posh/
+   February 10, 2016 - With Windows 10 Anniversary Update, one can choose between the light and dark modes. Here is a set of PowerShell commands to set this in case you want to automate it.
+
+2. Enable Dark or Light mode in Windows via PowerShell · GitHub
+   URL: https://gist.github.com/bobby-tablez/4b5f1ee02c68a93dc8312c4ff858c0a7
+   Enable Dark or Light...\n+==========================================================+
+2026-01-03 17:11:29 | DEBUG | AURA.Controller | 
+------------------------------------------------------------\nOBSERVATION:\nAction completed. Result: 1. Windows 10: How to Enable Dark mode in PowerShell | Joon's Blog
+   URL: http://joonro.github.io/blog/posts/windows-10-enable-dark-mode-posh/
+   February 10, 2016 - With Windows 10 Anniversary Update, one can choose between the light and dark modes. Here is a set of PowerShell commands to set this in case you want to automate it.
+
+2. Enable Dark or Light mode in Windows via PowerShell · GitHub
+   URL: https://gist.github.com/bobby-tablez/4b5f1ee02c68a93dc8312c4ff858c0a7
+   Enable Dark or Light... (truncated)\n------------------------------------------------------------
+2026-01-03 17:11:29 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 1 - THINKING...
++==========================================================+
+2026-01-03 17:11:32 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 1 - ACTION DECIDED
++==========================================================+
+| TYPE: ACTION
+| THOUGHT: I have found a GitHub Gist that provides PowerShell commands to enable Dark or Light mode in Windows. I will use the commands from this gist to change the system and app theme to dark mode. The releva...
+| TOOL: SHELL_EXECUTE
+| ARGS: {
+  "command": "Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value 0; Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 0"
+}
++==========================================================+
+2026-01-03 17:11:32 | ERROR | AURA.Controller | 
++==========================================================+\n| STEP 1 - EXECUTION FAILED [X]\n+==========================================================+\n| ERROR: 'Set-ItemProperty' is not recognized as an internal or external command,
+operable program or batch file.\n| FAILURE COUNT: 1/4\n+==========================================================+
+2026-01-03 17:11:32 | DEBUG | AURA.Controller | 
+------------------------------------------------------------\nOBSERVATION:\nAction failed with error: 'Set-ItemProperty' is not recognized as an internal or external command,
+operable program or batch file.\n------------------------------------------------------------
+2026-01-03 17:11:32 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 2 - THINKING...
++==========================================================+
+2026-01-03 17:11:35 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 2 - ACTION DECIDED
++==========================================================+
+| TYPE: ACTION
+| THOUGHT: The previous command failed because `Set-ItemProperty` is a PowerShell cmdlet, and it was likely executed in a regular command prompt environment. I need to explicitly tell the shell to run the comman...
+| TOOL: SHELL_EXECUTE
+| ARGS: {
+  "command": "powershell -command \"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value 0; Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 0\""
+}
++==========================================================+
+2026-01-03 17:11:35 | INFO | AURA.Controller | 
++==========================================================+\n| STEP 2 - EXECUTION SUCCESS [OK]\n+==========================================================+\n| RESULT: \n+==========================================================+
+2026-01-03 17:11:35 | DEBUG | AURA.Controller | 
+------------------------------------------------------------\nOBSERVATION:\nAction completed. Result: \n------------------------------------------------------------
+2026-01-03 17:11:35 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 3 - THINKING...
++==========================================================+
+2026-01-03 17:11:36 | INFO | AURA.Controller | 
++==========================================================+
+| STEP 3 - ACTION DECIDED
++==========================================================+
+| TYPE: STOP
+| THOUGHT: N/A
+| TOOL: N/A
+| ARGS: {}
++==========================================================+

@@ -96,3 +96,291 @@ PARSED ACTION (Pretty JSON):
   "message": "I am currently unable to search the web using the `SEARCH_GOOGLE` tool as it is returning \"No results found\" for all queries. I cannot complete your request to search for \"Nikhil Kamath\" until this issue is resolved."
 }
 ============================================================
+2026-01-03 16:41:22 | DEBUG | AURA.Brain | ============================================================
+GEMINI RAW OUTPUT:
+============================================================
+{
+  "thought": "The user wants to search for 'Nikil Kamath' on the web. I should use the SEARCH_WEB tool for this.",
+  "type": "ACTION",
+  "tool": "SEARCH_WEB",
+  "params": {
+    "query": "Nikil Kamath"
+  }
+}
+============================================================
+2026-01-03 16:41:22 | DEBUG | AURA.Brain | ============================================================
+PARSED ACTION (Pretty JSON):
+============================================================
+{
+  "thought": "The user wants to search for 'Nikil Kamath' on the web. I should use the SEARCH_WEB tool for this.",
+  "type": "ACTION",
+  "tool": "SEARCH_WEB",
+  "params": {
+    "query": "Nikil Kamath"
+  }
+}
+============================================================
+2026-01-03 16:41:28 | DEBUG | AURA.Brain | ============================================================
+GEMINI RAW OUTPUT:
+============================================================
+{
+  "thought": "I have successfully searched for 'Nikil Kamath' on the web and found relevant information. I can now provide a summary to the user.",
+  "type": "RESPONSE",
+  "message": "Nikhil Kamath is an Indian entrepreneur and investor, born on September 5, 1986. He is the co-founder of Zerodha, a retail stockbroker, and True Beacon, an asset management company. As of December 2025, Forbes estimates his net worth at $3.3 billion, and he is on Forbes' list of India's 100 Richest for 2024, alongside his brother Nithin."
+}
+============================================================
+2026-01-03 16:41:28 | DEBUG | AURA.Brain | ============================================================
+PARSED ACTION (Pretty JSON):
+============================================================
+{
+  "thought": "I have successfully searched for 'Nikil Kamath' on the web and found relevant information. I can now provide a summary to the user.",
+  "type": "RESPONSE",
+  "message": "Nikhil Kamath is an Indian entrepreneur and investor, born on September 5, 1986. He is the co-founder of Zerodha, a retail stockbroker, and True Beacon, an asset management company. As of December 2025, Forbes estimates his net worth at $3.3 billion, and he is on Forbes' list of India's 100 Richest for 2024, alongside his brother Nithin."
+}
+============================================================
+2026-01-03 17:08:40 | DEBUG | AURA.Brain | ============================================================
+GEMINI RAW OUTPUT:
+============================================================
+{"type": "ERROR", "message": "Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 19.375948573s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 19
+}
+]"}
+============================================================
+2026-01-03 17:08:40 | ERROR | AURA.Brain | JSON Parse Error: Invalid control character at: line 1 column 303 (char 302)
+Raw output was:
+{"type": "ERROR", "message": "Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 19.375948573s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 19
+}
+]"}
+2026-01-03 17:10:28 | DEBUG | AURA.Brain | ============================================================
+GEMINI RAW OUTPUT:
+============================================================
+{"type": "ERROR", "message": "Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 31.157837557s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 31
+}
+]"}
+============================================================
+2026-01-03 17:10:28 | ERROR | AURA.Brain | JSON Parse Error: Invalid control character at: line 1 column 303 (char 302)
+Raw output was:
+{"type": "ERROR", "message": "Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 31.157837557s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 31
+}
+]"}
+2026-01-03 17:11:06 | DEBUG | AURA.Brain | ============================================================
+GEMINI RAW OUTPUT:
+============================================================
+{
+  "thought": "The user greeted me with 'hello'. I should respond with a friendly greeting.",
+  "type": "RESPONSE",
+  "message": "Hello! How can I assist you today?"
+}
+============================================================
+2026-01-03 17:11:06 | DEBUG | AURA.Brain | ============================================================
+PARSED ACTION (Pretty JSON):
+============================================================
+{
+  "thought": "The user greeted me with 'hello'. I should respond with a friendly greeting.",
+  "type": "RESPONSE",
+  "message": "Hello! How can I assist you today?"
+}
+============================================================
+2026-01-03 17:11:26 | DEBUG | AURA.Brain | ============================================================
+GEMINI RAW OUTPUT:
+============================================================
+{
+  "thought": "The user wants to open system settings and change the display mode to dark mode. I need to find out how to achieve this using available tools, likely via PowerShell commands. I will start by searching for methods to change the Windows theme or display mode programmatically.",
+  "type": "ACTION",
+  "tool": "SEARCH_WEB",
+  "params": {
+    "query": "powershell command change windows theme dark mode"
+  }
+}
+============================================================
+2026-01-03 17:11:26 | DEBUG | AURA.Brain | ============================================================
+PARSED ACTION (Pretty JSON):
+============================================================
+{
+  "thought": "The user wants to open system settings and change the display mode to dark mode. I need to find out how to achieve this using available tools, likely via PowerShell commands. I will start by searching for methods to change the Windows theme or display mode programmatically.",
+  "type": "ACTION",
+  "tool": "SEARCH_WEB",
+  "params": {
+    "query": "powershell command change windows theme dark mode"
+  }
+}
+============================================================
+2026-01-03 17:11:32 | DEBUG | AURA.Brain | ============================================================
+GEMINI RAW OUTPUT:
+============================================================
+{
+  "thought": "I have found a GitHub Gist that provides PowerShell commands to enable Dark or Light mode in Windows. I will use the commands from this gist to change the system and app theme to dark mode. The relevant registry keys are `AppsUseLightTheme` and `SystemUsesLightTheme` under `HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize`, and setting their value to `0` enables dark mode.",
+  "type": "ACTION",
+  "tool": "SHELL_EXECUTE",
+  "params": {
+    "command": "Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value 0; Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 0"
+  }
+}
+============================================================
+2026-01-03 17:11:32 | DEBUG | AURA.Brain | ============================================================
+PARSED ACTION (Pretty JSON):
+============================================================
+{
+  "thought": "I have found a GitHub Gist that provides PowerShell commands to enable Dark or Light mode in Windows. I will use the commands from this gist to change the system and app theme to dark mode. The relevant registry keys are `AppsUseLightTheme` and `SystemUsesLightTheme` under `HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize`, and setting their value to `0` enables dark mode.",
+  "type": "ACTION",
+  "tool": "SHELL_EXECUTE",
+  "params": {
+    "command": "Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value 0; Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 0"
+  }
+}
+============================================================
+2026-01-03 17:11:35 | DEBUG | AURA.Brain | ============================================================
+GEMINI RAW OUTPUT:
+============================================================
+{
+  "thought": "The previous command failed because `Set-ItemProperty` is a PowerShell cmdlet, and it was likely executed in a regular command prompt environment. I need to explicitly tell the shell to run the command using PowerShell. I will use `powershell -command` to achieve this.",
+  "type": "ACTION",
+  "tool": "SHELL_EXECUTE",
+  "params": {
+    "command": "powershell -command \"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value 0; Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 0\""
+  }
+}
+============================================================
+2026-01-03 17:11:35 | DEBUG | AURA.Brain | ============================================================
+PARSED ACTION (Pretty JSON):
+============================================================
+{
+  "thought": "The previous command failed because `Set-ItemProperty` is a PowerShell cmdlet, and it was likely executed in a regular command prompt environment. I need to explicitly tell the shell to run the command using PowerShell. I will use `powershell -command` to achieve this.",
+  "type": "ACTION",
+  "tool": "SHELL_EXECUTE",
+  "params": {
+    "command": "powershell -command \"Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value 0; Set-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 0\""
+  }
+}
+============================================================
+2026-01-03 17:11:36 | DEBUG | AURA.Brain | ============================================================
+GEMINI RAW OUTPUT:
+============================================================
+{"type": "ERROR", "message": "Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 23.690915154s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 23
+}
+]"}
+============================================================
+2026-01-03 17:11:36 | ERROR | AURA.Brain | JSON Parse Error: Invalid control character at: line 1 column 303 (char 302)
+Raw output was:
+{"type": "ERROR", "message": "Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 23.690915154s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 23
+}
+]"}

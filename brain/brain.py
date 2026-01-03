@@ -1,7 +1,11 @@
+"""
+Brain - Decision-making component for AURA agent.
+Uses LLMRouter to select between Ollama (primary) and Gemini (manual).
+"""
 import json
-import re
 import logging
-from brain.gemini_client import GeminiClient
+from typing import Optional
+from brain.llm_router import LLMRouter
 from brain.prompt import SYSTEM_PROMPT
 
 # =========================================================
@@ -38,12 +42,36 @@ if not logger.handlers:
 class Brain:
     """
     Decision-making component.
-    Uses Google Gemini to decide the next action.
+    Uses LLMRouter to switch between Ollama (default) and Gemini.
     """
 
-    def __init__(self):
-        # Initialize Gemini Client
-        self.llm = GeminiClient()
+    def __init__(self, default_provider: str = "ollama"):
+        # Initialize LLM Router with provider selection
+        self.llm = LLMRouter(default_provider=default_provider)
+        logger.info(f"Brain initialized with LLM provider: {self.llm.current_provider_name}")
+
+    def set_provider(self, provider_name: str) -> bool:
+        """
+        Switch to a different LLM provider.
+        
+        Args:
+            provider_name: 'ollama' or 'gemini'
+            
+        Returns:
+            True if switch successful
+        """
+        success = self.llm.set_provider(provider_name)
+        if success:
+            logger.info(f"Brain switched to provider: {provider_name}")
+        return success
+    
+    def get_provider_name(self) -> str:
+        """Get current provider name."""
+        return self.llm.current_provider_name
+    
+    def get_provider_status(self) -> dict:
+        """Get status of all providers."""
+        return self.llm.get_provider_status()
 
     def next_action(
         self,
@@ -81,16 +109,16 @@ Respond with JSON only.
         raw_output = self.llm.generate_response(prompt)
         
         # Log full raw output with visual separator
+        provider_name = self.llm.current_provider_name.upper()
         logger.debug(
             f"{'='*60}\n"
-            f"GEMINI RAW OUTPUT:\n"
+            f"{provider_name} RAW OUTPUT:\n"
             f"{'='*60}\n"
             f"{raw_output}\n"
             f"{'='*60}"
         )
         
         # --- Clean Markdown Fencing ---
-        # Gemini often supports "```json ... ```"
         clean_output = self._clean_json(raw_output)
         
         # --- Strict JSON enforcement ---
