@@ -1829,3 +1829,108 @@ PARSED ACTION (Pretty JSON):
 }
 ============================================================
 2026-01-04 05:51:26 | INFO | AURA.Brain | Brain initialized with LLM provider: ollama
+2026-01-04 06:05:54 | INFO | AURA.Brain | Brain initialized with LLM provider: ollama
+2026-01-04 06:06:32 | INFO | AURA.Brain | 📴 OFFLINE MODE: Using offline-optimized prompt
+2026-01-04 06:07:18 | DEBUG | AURA.Brain | ============================================================
+OLLAMA RAW OUTPUT:
+============================================================
+{
+  "thought": "I can explain quantum computing based on my training, as it does not require any file operations or web searches.",
+  "type": "RESPONSE",
+  "message": "Quantum computing is a type of computing that uses the principles of quantum theory to perform operations on data. Unlike classical computers that use bits (0s and 1s) for processing information, quantum computers use quantum bits or qubits. Qubits can exist in multiple states simultaneously due to superposition, allowing quantum computers to process a vast amount of possibilities at once. This property makes them particularly suitable for solving complex problems that are difficult or impossible for classical computers. Quantum computing also leverages another principle called entanglement, where qubits become interconnected and the state of one can instantaneously affect the state of another, no matter the distance between them."
+}
+============================================================
+2026-01-04 06:07:18 | DEBUG | AURA.Brain | ============================================================
+PARSED ACTION (Pretty JSON):
+============================================================
+{
+  "thought": "I can explain quantum computing based on my training, as it does not require any file operations or web searches.",
+  "type": "RESPONSE",
+  "message": "Quantum computing is a type of computing that uses the principles of quantum theory to perform operations on data. Unlike classical computers that use bits (0s and 1s) for processing information, quantum computers use quantum bits or qubits. Qubits can exist in multiple states simultaneously due to superposition, allowing quantum computers to process a vast amount of possibilities at once. This property makes them particularly suitable for solving complex problems that are difficult or impossible for classical computers. Quantum computing also leverages another principle called entanglement, where qubits become interconnected and the state of one can instantaneously affect the state of another, no matter the distance between them."
+}
+============================================================
+2026-01-04 06:10:36 | INFO | AURA.Brain | 📴 OFFLINE MODE: Using offline-optimized prompt
+2026-01-04 06:11:36 | DEBUG | AURA.Brain | ============================================================
+OLLAMA RAW OUTPUT:
+============================================================
+{
+  "thought": "I can explain what Python is and how it can be useful for a 10th class student based on my training knowledge.",
+  "type": "RESPONSE",
+  "message": "Python is a high-level programming language known for its simplicity and readability. It is widely used in various fields such as web development, data analysis, artificial intelligence, and more. For a 10th class student, Python can be incredibly useful in several ways:
+
+1. **Learning Fundamentals**: Python teaches you basic programming concepts like variables, loops, functions, and classes, which are foundational for any programmer.
+2. **Problem Solving**: With Python, you can solve mathematical problems, simulate real-world scenarios, and develop small applications that help in understanding complex topics.
+3. **Data Analysis**: You can use Python libraries like Pandas to analyze data sets, which can be beneficial if you're interested in subjects like statistics or research.
+4. **Automation**: Python scripts can automate repetitive tasks such as file manipulation, web scraping, and more, saving time and effort.
+
+To get started, you might want to install a Python environment on your computer and try out some basic programs. There are many online resources and tutorials available that can guide you step-by-step."
+}
+============================================================
+2026-01-04 06:11:37 | ERROR | AURA.Brain | JSON Parse Error: Invalid control character at: line 4 column 286 (char 436)
+Raw output was:
+{
+  "thought": "I can explain what Python is and how it can be useful for a 10th class student based on my training knowledge.",
+  "type": "RESPONSE",
+  "message": "Python is a high-level programming language known for its simplicity and readability. It is widely used in various fields such as web development, data analysis, artificial intelligence, and more. For a 10th class student, Python can be incredibly useful in several ways:
+
+1. **Learning Fundamentals**: Python teaches you basic programming concepts like variables, loops, functions, and classes, which are foundational for any programmer.
+2. **Problem Solving**: With Python, you can solve mathematical problems, simulate real-world scenarios, and develop small applications that help in understanding complex topics.
+3. **Data Analysis**: You can use Python libraries like Pandas to analyze data sets, which can be beneficial if you're interested in subjects like statistics or research.
+4. **Automation**: Python scripts can automate repetitive tasks such as file manipulation, web scraping, and more, saving time and effort.
+
+To get started, you might want to install a Python environment on your computer and try out some basic programs. There are many online resources and tutorials available that can guide you step-by-step."
+}
+2026-01-04 06:12:17 | INFO | AURA.Brain | 📴 OFFLINE MODE: Using offline-optimized prompt
+2026-01-04 06:13:25 | DEBUG | AURA.Brain | ============================================================
+OLLAMA RAW OUTPUT:
+============================================================
+{
+  "thought": "I need to explain Python and then write this content in Notepad. I'll use the WRITE_AND_OPEN tool to create and open a file.",
+  "type": "ACTION",
+  "tool": "WRITE_AND_OPEN",
+  "params": {
+    "path": "C:/Users/elact/Documents/python_explanation.txt",
+    "content": "Title: Introduction to Python\n\nPython is a high-level programming language known for its simplicity and readability. It is widely used in various fields such as web development, data analysis, artificial intelligence, and more. For a 10th class student, Python can be incredibly useful in several ways:\n\n1. **Learning Fundamentals**: Python teaches you basic programming concepts like variables, loops, functions, and classes, which are foundational for any programmer.\n2. **Problem Solving**: With Python, you can solve mathematical problems, simulate real-world scenarios, and develop small applications that help in understanding complex topics.\n3. **Data Analysis**: You can use Python libraries like Pandas to analyze data sets, which can be beneficial if you're interested in subjects like statistics or research.\n4. **Automation**: Python scripts can automate repetitive tasks such as file manipulation, web scraping, and more, saving time and effort."
+  }
+}
+============================================================
+2026-01-04 06:13:25 | DEBUG | AURA.Brain | ============================================================
+PARSED ACTION (Pretty JSON):
+============================================================
+{
+  "thought": "I need to explain Python and then write this content in Notepad. I'll use the WRITE_AND_OPEN tool to create and open a file.",
+  "type": "ACTION",
+  "tool": "WRITE_AND_OPEN",
+  "params": {
+    "path": "C:/Users/elact/Documents/python_explanation.txt",
+    "content": "Title: Introduction to Python\n\nPython is a high-level programming language known for its simplicity and readability. It is widely used in various fields such as web development, data analysis, artificial intelligence, and more. For a 10th class student, Python can be incredibly useful in several ways:\n\n1. **Learning Fundamentals**: Python teaches you basic programming concepts like variables, loops, functions, and classes, which are foundational for any programmer.\n2. **Problem Solving**: With Python, you can solve mathematical problems, simulate real-world scenarios, and develop small applications that help in understanding complex topics.\n3. **Data Analysis**: You can use Python libraries like Pandas to analyze data sets, which can be beneficial if you're interested in subjects like statistics or research.\n4. **Automation**: Python scripts can automate repetitive tasks such as file manipulation, web scraping, and more, saving time and effort."
+  }
+}
+============================================================
+2026-01-04 06:13:26 | INFO | AURA.Brain | 📴 OFFLINE MODE: Using offline-optimized prompt
+2026-01-04 06:14:35 | DEBUG | AURA.Brain | ============================================================
+OLLAMA RAW OUTPUT:
+============================================================
+{
+  "thought": "I need to explain Python and then write this content in Notepad using the WRITE_AND_OPEN tool.",
+  "type": "ACTION",
+  "tool": "WRITE_AND_OPEN",
+  "params": {
+    "path": "C:/Users/elact/Documents/python_explanation.txt",
+    "content": "Title: Introduction to Python\n\nPython is a high-level programming language known for its simplicity and readability. It is widely used in various fields such as web development, data analysis, artificial intelligence, and more. For a 10th class student, Python can be incredibly useful in several ways:\n\n1. **Learning Fundamentals**: Python teaches you basic programming concepts like variables, loops, functions, and classes, which are foundational for any programmer.\n2. **Problem Solving**: With Python, you can solve mathematical problems, simulate real-world scenarios, and develop small applications that help in understanding complex topics.\n3. **Data Analysis**: You can use Python libraries like Pandas to analyze data sets, which can be beneficial if you're interested in subjects like statistics or research.\n4. **Automation**: Python scripts can automate repetitive tasks such as file manipulation, web scraping, and more, saving time and effort."
+  }
+}
+============================================================
+2026-01-04 06:14:35 | DEBUG | AURA.Brain | ============================================================
+PARSED ACTION (Pretty JSON):
+============================================================
+{
+  "thought": "I need to explain Python and then write this content in Notepad using the WRITE_AND_OPEN tool.",
+  "type": "ACTION",
+  "tool": "WRITE_AND_OPEN",
+  "params": {
+    "path": "C:/Users/elact/Documents/python_explanation.txt",
+    "content": "Title: Introduction to Python\n\nPython is a high-level programming language known for its simplicity and readability. It is widely used in various fields such as web development, data analysis, artificial intelligence, and more. For a 10th class student, Python can be incredibly useful in several ways:\n\n1. **Learning Fundamentals**: Python teaches you basic programming concepts like variables, loops, functions, and classes, which are foundational for any programmer.\n2. **Problem Solving**: With Python, you can solve mathematical problems, simulate real-world scenarios, and develop small applications that help in understanding complex topics.\n3. **Data Analysis**: You can use Python libraries like Pandas to analyze data sets, which can be beneficial if you're interested in subjects like statistics or research.\n4. **Automation**: Python scripts can automate repetitive tasks such as file manipulation, web scraping, and more, saving time and effort."
+  }
+}
+============================================================
