@@ -50,6 +50,40 @@
     }
 }
 
+// Microphone Button - Minimal & Clean
+.mic-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--text-tertiary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+
+    svg {
+        transition: all var(--transition-fast);
+    }
+
+    &:hover:not(:disabled) {
+        color: var(--text-secondary);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    &:active:not(:disabled) {
+        transform: scale(0.95);
+    }
+
+    &:disabled {
+        color: var(--text-disabled);
+        cursor: not-allowed;
+    }
+}
+
 .send-btn {
     width: 40px;
     height: 40px;

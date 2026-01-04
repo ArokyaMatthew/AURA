@@ -7,7 +7,7 @@
   <!-- Navigation -->
   <nav class="sidebar-nav">
     @for (item of navItems; track item.label) {
-    <button class="nav-item" [class.active]="item.active">
+    <button class="nav-item" [class.active]="item.active" (click)="onNavClick(item)">
       <span class="nav-label">{{ item.label }}</span>
     </button>
     }

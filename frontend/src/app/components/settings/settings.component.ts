@@ -1,6 +1,7 @@
-import { Component, signal, OnInit } from '@angular/core';
+import { Component, signal, OnInit, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService, LLMStatusResponse } from '../../services/api.service';
+import { SettingsService } from '../../services/settings.service';
 
 @Component({
     selector: 'app-settings',
@@ -10,28 +11,38 @@ import { ApiService, LLMStatusResponse } from '../../services/api.service';
     styleUrl: './settings.component.scss'
 })
 export class SettingsComponent implements OnInit {
-    isOpen = signal(false);
     isLoading = signal(false);
     statusMessage = signal<string | null>(null);
 
     // Provider status from API
     providerHealth = signal<{ [key: string]: boolean }>({});
 
-    constructor(public api: ApiService) { }
+    constructor(
+        public api: ApiService,
+        public settings: SettingsService
+    ) {
+        // Refresh status when panel opens
+        effect(() => {
+            if (this.settings.isOpen()) {
+                this.refreshStatus();
+            }
+        });
+    }
 
     ngOnInit() {
         this.refreshStatus();
     }
 
     toggle() {
-        this.isOpen.update(v => !v);
-        if (this.isOpen()) {
-            this.refreshStatus();
-        }
+        this.settings.toggle();
     }
 
     close() {
-        this.isOpen.set(false);
+        this.settings.close();
+    }
+
+    isOpen() {
+        return this.settings.isOpen();
     }
 
     async refreshStatus() {
