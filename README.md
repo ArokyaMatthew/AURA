@@ -17,6 +17,9 @@ Environments where cloud AI is inaccessible or restricted
 
 While most AI tools today stop working the moment the internet goes down, AURA continues to work.
 
+<img width="1919" height="972" alt="Screenshot 2026-01-04 015147" src="https://github.com/user-attachments/assets/22d58d18-62c4-4c62-b503-56fa9ce3c9ec" />
+
+
 🚨 The Problem
 
 AI is rapidly becoming a core skill — in education, productivity, and employment.
@@ -158,5 +161,19 @@ If this idea resonates with you:
 🛠️ Contribute code or ideas
 
 📣 Share it with educators and communities
+
+How to use:
+
+to start frontend:
+cd ....AURA/frontend
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+npm run start
+
+to start backend:
+cd ...../AURA
+python -m uvicorn backend.main:app --reload
+
+install requirements in requirements.txt 
+Should be run in 2 seperate terminals for performance.
 
 Together, we can make sure no one is left behind in the AI era.
